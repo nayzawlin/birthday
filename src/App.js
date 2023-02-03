@@ -18,7 +18,6 @@ function App() {
 
 	const onEnter = () => {
 		setEnter(true);
-		audio.play()
 	}
 
 
@@ -49,7 +48,6 @@ function App() {
 	// 	return () => clearInterval(interval);
 	//   }, [state.img]);
 
-	let audio = new Audio("https://drive.google.com/file/d/172S0gU4mAJIAWN_t-XrfcIByFPDEPbNN/view?usp=share_link")
 
 	return (
 		<div className={enter ? 'App bg' : 'App'}>
@@ -66,13 +64,13 @@ function App() {
 				enter && 
 				<Fragment>
 				
-					{/* <Sound
-						url={'https://drive.google.com/file/d/172S0gU4mAJIAWN_t-XrfcIByFPDEPbNN/view?usp=share_link'}
+					<Sound
+						url={songs[currentSong]}
 						playStatus={Sound.status.PLAYING}
 						autoLoad={true}
 						// loop={true}
 						onFinishedPlaying={onFinishedPlaying}
-					/> */}
+					/>
 					
 					<Balloon />
 					<Menu />
